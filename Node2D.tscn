@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ColorRect.gd" type="Script" id=1]
+[ext_resource path="res://Fl_252_ela_Wisshorn_Spherical_Panorama_1.jpg" type="Texture" id=2]
+[ext_resource path="res://RTX.shader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
+shader_param/u_resolution = Vector2( 1366, 768 )
+shader_param/MAX_DIST = 99999.0
+shader_param/sky = 1.0
+shader_param/u_pos = Vector3( -5, 0, 0 )
+shader_param/u_mouse = Vector2( 0, 0 )
+shader_param/u_seed1 = null
+shader_param/u_seed2 = null
+shader_param/u_skybox = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 1 )
+anchor_bottom = 0.118
+margin_left = 1.0
+margin_right = 1367.0
+margin_bottom = 768.0
+rect_min_size = Vector2( 1366, 768 )
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
