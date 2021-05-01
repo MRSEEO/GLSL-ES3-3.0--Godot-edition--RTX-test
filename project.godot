@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="OpenGL_RTXinShader"
+config/name="GLSL_ES3.0_RTXinShader"
 config/description="Shader test"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
